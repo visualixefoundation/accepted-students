@@ -77,12 +77,12 @@ function showView(id) {
   next.classList.add("active", "entering");
   updateChrome(id);
 
-  requestAnimationFrame(() => {
+  requestAnimationFrame(() =>
     requestAnimationFrame(() => {
       next.classList.remove("entering");
       next.classList.add("entered");
-    });
-  });
+    })
+  );
 
   setTimeout(() => {
     prev.classList.remove("leaving", "active", "entered", "entering");
@@ -93,13 +93,13 @@ function showView(id) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-document.querySelectorAll(".cat-btn").forEach((btn) => {
-  btn.addEventListener("click", () => showView(btn.dataset.target));
-});
+document.querySelectorAll(".cat-btn").forEach((btn) =>
+  btn.addEventListener("click", () => showView(btn.dataset.target))
+);
 
-document.querySelectorAll("[data-back]").forEach((btn) => {
-  btn.addEventListener("click", () => showView("home"));
-});
+document.querySelectorAll("[data-back]").forEach((btn) =>
+  btn.addEventListener("click", () => showView("home"))
+);
 
 const searchBox = document.getElementById("searchBox");
 const resultsDiv = document.getElementById("results");
@@ -107,11 +107,9 @@ const resultsDiv = document.getElementById("results");
 searchBox.addEventListener("input", function () {
   const query = this.value.toLowerCase().trim();
   resultsDiv.innerHTML = "";
-
   if (query.length > 1) {
     const matches = students.filter((s) => s.name.toLowerCase().includes(query));
     resultsDiv.style.display = "block";
-
     if (matches.length) {
       matches.forEach((s) => {
         const item = document.createElement("p");

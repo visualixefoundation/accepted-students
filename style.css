@@ -55,6 +55,7 @@ body {
 }
 
 .sticky-header {
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -62,6 +63,7 @@ body {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--sticky-border);
+  margin: 0;
   padding: 12px 20px;
 }
 
