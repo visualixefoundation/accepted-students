@@ -20,11 +20,40 @@ const students = [
   { name: "Roque Desouza", program: "SVF Applied 2026", url: "svf2026applied.html" }
 ];
 
+// Theme
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  const btn = document.getElementById("themeToggle");
+  if (btn) btn.textContent = theme === "dark" ? "☀️" : "🌙";
+}
+
+(function initTheme() {
+  const saved = localStorage.getItem("theme");
+  if (saved === "dark" || saved === "light") setTheme(saved);
+  else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) setTheme("light");
+  else setTheme("dark");
+})();
+
+document.getElementById("themeToggle").addEventListener("click", () => {
+  const current = document.documentElement.getAttribute("data-theme");
+  setTheme(current === "dark" ? "light" : "dark");
+});
+
+// Views + remember last category
 function showView(id) {
   document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
   const target = document.getElementById("view-" + id);
   if (target) target.classList.add("active");
+  if (id !== "home") sessionStorage.setItem("lastView", id);
+  else sessionStorage.removeItem("lastView");
 }
+
+// Restore last view on load
+(function restoreView() {
+  const last = sessionStorage.getItem("lastView");
+  if (last && document.getElementById("view-" + last)) showView(last);
+})();
 
 document.querySelectorAll(".cat-btn").forEach(btn => {
   btn.addEventListener("click", () => showView(btn.dataset.target));
@@ -34,26 +63,69 @@ document.querySelectorAll("[data-back]").forEach(btn => {
   btn.addEventListener("click", () => showView("home"));
 });
 
+// Year filters
+document.querySelectorAll(".year-filters").forEach(group => {
+  const listId = group.dataset.list;
+  const list = document.getElementById(listId);
+  if (!list) return;
+
+  group.querySelectorAll(".year-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      group.querySelectorAll(".year-chip").forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      const year = chip.dataset.year;
+      list.querySelectorAll("li").forEach(li => {
+        const years = (li.dataset.years || "all").split(/\s+/);
+        const show = year === "all" || years.includes("all") || years.includes(year);
+        li.style.display = show ? "" : "none";
+      });
+    });
+  });
+});
+
+// Search
 const searchBox = document.getElementById("searchBox");
 const resultsDiv = document.getElementById("results");
+const searchCount = document.getElementById("searchCount");
+let currentMatches = [];
 
-searchBox.addEventListener("input", function () {
-  const query = this.value.toLowerCase().trim();
+function renderResults(query) {
   resultsDiv.innerHTML = "";
+  currentMatches = [];
   if (query.length > 1) {
-    const matches = students.filter(s => s.name.toLowerCase().includes(query));
+    currentMatches = students.filter(s => s.name.toLowerCase().includes(query));
     resultsDiv.style.display = "block";
-    if (matches.length) {
-      matches.forEach(s => {
+    searchCount.classList.add("visible");
+    if (currentMatches.length) {
+      searchCount.textContent = currentMatches.length + " match" + (currentMatches.length === 1 ? "" : "es");
+      currentMatches.forEach(s => {
         const item = document.createElement("p");
         item.innerHTML = `<strong>${s.name}</strong> — <a href="${s.url}">${s.program}</a>`;
+        item.addEventListener("click", (e) => {
+          if (e.target.tagName !== "A") window.location.href = s.url;
+        });
         resultsDiv.appendChild(item);
       });
     } else {
-      resultsDiv.innerHTML = '<p style="color:#888">No matches found.</p>';
+      searchCount.textContent = "0 matches";
+      resultsDiv.innerHTML = '<p style="color:var(--text-dim)">No matches found.</p>';
     }
   } else {
     resultsDiv.style.display = "none";
+    searchCount.classList.remove("visible");
+    searchCount.textContent = "";
+  }
+}
+
+searchBox.addEventListener("input", function () {
+  renderResults(this.value.toLowerCase().trim());
+});
+
+// Enter opens first match
+searchBox.addEventListener("keydown", function (e) {
+  if (e.key === "Enter" && currentMatches.length > 0) {
+    e.preventDefault();
+    window.location.href = currentMatches[0].url;
   }
 });
 

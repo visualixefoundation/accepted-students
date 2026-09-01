@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accepted Students | Visualixe Foundation</title>
-    <!-- Linking the CSS File -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="header-brand">
-            <span class="logo" aria-hidden="true">🎓</span>
-            <h1>Accepted Students</h1>
+        <div class="header-top">
+            <div class="header-brand">
+                <span class="logo" aria-hidden="true">🎓</span>
+                <h1>Accepted Students</h1>
+            </div>
+            <button type="button" class="theme-btn" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">🌙</button>
         </div>
         <div class="search-wrap">
             <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -21,6 +23,7 @@
             </svg>
             <input type="text" id="searchBox" placeholder="Search students..." autocomplete="off">
             <div id="results"></div>
+            <div class="search-count" id="searchCount"></div>
         </div>
     </header>
 
@@ -28,67 +31,69 @@
         <div class="main-box">
             <p class="intro">Explore students accepted into competitive summer programs, international high schools, and universities.</p>
 
-            <!-- Home: three category icons -->
             <div id="view-home" class="section active">
                 <div class="categories">
                     <button type="button" class="cat-btn" data-target="summer">
                         <div class="cat-icon summer">☀️</div>
                         <span class="cat-label">Summer Programs</span>
-                        <span class="cat-hint">13 programs</span>
+                        <span class="cat-badge">13</span>
                     </button>
                     <button type="button" class="cat-btn" data-target="highschool">
                         <div class="cat-icon hs">🏫</div>
                         <span class="cat-label">High School</span>
-                        <span class="cat-hint">5 schools</span>
+                        <span class="cat-badge">5</span>
                     </button>
                     <button type="button" class="cat-btn" data-target="university">
                         <div class="cat-icon uni">🎓</div>
                         <span class="cat-label">University Alum</span>
-                        <span class="cat-hint">1 program</span>
+                        <span class="cat-badge">1</span>
                     </button>
                 </div>
             </div>
 
-            <!-- Summer Programs -->
             <div id="view-summer" class="section">
                 <button type="button" class="back-btn" data-back>← Back to Home</button>
                 <h2>Summer Programs</h2>
-                <ul>
-                    <li><strong>AddisCoder</strong> — <a href="addiscoder2023.html">2023</a> · <a href="addiscoder2026.html">2026</a></li>
-                    <li><strong>NASA Space Apps</strong> — <a href="nasaspaceapps2025.html">2025</a></li>
-                    <li><strong>AFS Global STEM</strong> — <a href="afsglobalstem2025.html">2025</a></li>
-                    <li><strong>HUVTSP</strong> — <a href="huvtsp2025.html">2025</a> · <a href="huvtsp2026.html">2026</a></li>
-                    <li><strong>John Locke Institute</strong> — <a href="johnlockeinstitute.html">View students</a></li>
-                    <li><strong>QuestBridge</strong> — <a href="questbridge2025.html">2025</a></li>
-                    <li><strong>SSP</strong> — <a href="ssp2025.html">2025</a> · <a href="ssp2026.html">2026</a></li>
-                    <li><strong>YYAS</strong> — <a href="yyas2025.html">2025</a> · <a href="yyas2026.html">2026</a></li>
-                    <li><strong>YYGS</strong> — <a href="yygs2025.html">2025</a> · <a href="yygs2026.html">2026</a></li>
-                    <li><strong>MITES Summer</strong> — <a href="mites2025.html">2025</a></li>
-                    <li><strong>NSRI</strong> — <a href="nsri.html">View students</a></li>
-                    <li><strong>RSI</strong> — <a href="rsi2025.html">2025</a></li>
-                    <li><strong>SVF Applied 2026</strong> — <a href="svf2026applied.html">View students</a></li>
+                <div class="year-filters" data-list="summer-list">
+                    <button type="button" class="year-chip active" data-year="all">All</button>
+                    <button type="button" class="year-chip" data-year="2023">2023</button>
+                    <button type="button" class="year-chip" data-year="2025">2025</button>
+                    <button type="button" class="year-chip" data-year="2026">2026</button>
+                </div>
+                <ul id="summer-list">
+                    <li data-years="2023 2026"><strong>AddisCoder</strong> — <a href="addiscoder2023.html">2023</a> · <a href="addiscoder2026.html">2026</a><span class="prog-desc">Intensive coding program for African students</span></li>
+                    <li data-years="2025"><strong>NASA Space Apps</strong> — <a href="nasaspaceapps2025.html">2025</a><span class="prog-desc">Global hackathon solving real-world challenges</span></li>
+                    <li data-years="2025"><strong>AFS Global STEM</strong> — <a href="afsglobalstem2025.html">2025</a><span class="prog-desc">STEM-focused international exchange</span></li>
+                    <li data-years="2025 2026"><strong>HUVTSP</strong> — <a href="huvtsp2025.html">2025</a> · <a href="huvtsp2026.html">2026</a><span class="prog-desc">Harvard Undergraduate Ventures summer program</span></li>
+                    <li data-years="all"><strong>John Locke Institute</strong> — <a href="johnlockeinstitute.html">View students</a><span class="prog-desc">Essay competition and academic institute</span></li>
+                    <li data-years="2025"><strong>QuestBridge</strong> — <a href="questbridge2025.html">2025</a><span class="prog-desc">College access for high-achieving students</span></li>
+                    <li data-years="2025 2026"><strong>SSP</strong> — <a href="ssp2025.html">2025</a> · <a href="ssp2026.html">2026</a><span class="prog-desc">Summer Science Program in research</span></li>
+                    <li data-years="2025 2026"><strong>YYAS</strong> — <a href="yyas2025.html">2025</a> · <a href="yyas2026.html">2026</a><span class="prog-desc">Yale Young African Scholars</span></li>
+                    <li data-years="2025 2026"><strong>YYGS</strong> — <a href="yygs2025.html">2025</a> · <a href="yygs2026.html">2026</a><span class="prog-desc">Yale Young Global Scholars</span></li>
+                    <li data-years="2025"><strong>MITES Summer</strong> — <a href="mites2025.html">2025</a><span class="prog-desc">MIT Introduction to Technology, Engineering & Science</span></li>
+                    <li data-years="all"><strong>NSRI</strong> — <a href="nsri.html">View students</a><span class="prog-desc">National Student Research Institute</span></li>
+                    <li data-years="2025"><strong>RSI</strong> — <a href="rsi2025.html">2025</a><span class="prog-desc">Research Science Institute at MIT</span></li>
+                    <li data-years="2026"><strong>SVF Applied 2026</strong> — <a href="svf2026applied.html">View students</a><span class="prog-desc">Silicon Valley Fellowship applied track</span></li>
                 </ul>
             </div>
 
-            <!-- High School -->
             <div id="view-highschool" class="section">
                 <button type="button" class="back-btn" data-back>← Back to Home</button>
                 <h2>High School</h2>
                 <ul>
-                    <li><strong>HOPAC</strong> — <a href="hopac.html">View students</a></li>
-                    <li><strong>UWC East Africa</strong> — <a href="uwceastafrica2027.html">Class of 2027</a> · <a href="uwceastafrica.html">Others</a></li>
-                    <li><strong>UWC RCN</strong> — <a href="uwcrcn.html">View students</a></li>
-                    <li><strong>ALA</strong> — <a href="alaclassof2026.html">Class of 2026</a></li>
-                    <li><strong>IST</strong> — <a href="ist.html">View students</a></li>
+                    <li><strong>HOPAC</strong> — <a href="hopac.html">View students</a><span class="prog-desc">Haven of Peace Academy, Tanzania</span></li>
+                    <li><strong>UWC East Africa</strong> — <a href="uwceastafrica2027.html">Class of 2027</a> · <a href="uwceastafrica.html">Others</a><span class="prog-desc">United World College East Africa</span></li>
+                    <li><strong>UWC RCN</strong> — <a href="uwcrcn.html">View students</a><span class="prog-desc">UWC Red Cross Nordic</span></li>
+                    <li><strong>ALA</strong> — <a href="alaclassof2026.html">Class of 2026</a><span class="prog-desc">African Leadership Academy</span></li>
+                    <li><strong>IST</strong> — <a href="ist.html">View students</a><span class="prog-desc">International School of Tanganyika</span></li>
                 </ul>
             </div>
 
-            <!-- University -->
             <div id="view-university" class="section">
                 <button type="button" class="back-btn" data-back>← Back to Home</button>
                 <h2>University Alum</h2>
                 <ul>
-                    <li><strong>UIC</strong> — <a href="uic.html">View students</a></li>
+                    <li><strong>UIC</strong> — <a href="uic.html">View students</a><span class="prog-desc">University of Illinois Chicago</span></li>
                 </ul>
             </div>
         </div>
