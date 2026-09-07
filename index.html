@@ -203,12 +203,12 @@
     }
     .home-categories {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
+      max-width: 320px;
+      margin: 8px auto 0;
       gap: 20px;
-      margin-top: 8px;
     }
     @media (max-width: 720px) {
-      .home-categories { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
       .site-title { display: none; }
     }
     .cat-btn {
@@ -389,16 +389,6 @@
             <span class="cat-label">Summer Programs</span>
             <span class="cat-hint">13 programs</span>
           </button>
-          <button type="button" class="cat-btn" data-target="highschool">
-            <div class="cat-icon hs">🏫</div>
-            <span class="cat-label">High School</span>
-            <span class="cat-hint">5 schools</span>
-          </button>
-          <button type="button" class="cat-btn" data-target="university">
-            <div class="cat-icon uni">🎓</div>
-            <span class="cat-label">University Alum</span>
-            <span class="cat-hint">1 program</span>
-          </button>
         </div>
       </div>
 
@@ -495,69 +485,6 @@
               <a class="ext-link" href="https://www.svfellow.com/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
             </div>
             <div class="years"><a class="year-chip" href="svf2026applied.html">View students</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div id="view-highschool" class="view">
-        <h2 class="detail-title">High School</h2>
-        <div class="programs">
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">HOPAC</span>
-              <a class="ext-link" href="https://www.hopac.sc.tz/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="hopac.html">View students</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">UWC East Africa</span>
-              <a class="ext-link" href="https://www.uwcea.org/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="nested">
-              <span class="nested-label">Cohorts</span>
-              <div class="years">
-                <a class="year-chip" href="uwceastafrica2027.html">Class of 2027</a>
-                <a class="year-chip" href="uwceastafrica.html">Others</a>
-              </div>
-            </div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">UWC RCN</span>
-              <a class="ext-link" href="https://uwc.org/school/uwc-red-cross-nordic/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="uwcrcn.html">View students</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">ALA</span>
-              <a class="ext-link" href="https://www.africanleadershipacademy.org/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="nested">
-              <span class="nested-label">Cohorts</span>
-              <div class="years"><a class="year-chip" href="alaclassof2026.html">Class of 2026</a></div>
-            </div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">IST</span>
-              <a class="ext-link" href="https://www.istafrica.co.tz/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="ist.html">View students</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div id="view-university" class="view">
-        <h2 class="detail-title">University Alum</h2>
-        <div class="programs">
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">UIC</span>
-              <a class="ext-link" href="https://www.uic.edu/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="uic.html">View students</a></div>
           </div>
         </div>
       </div>
@@ -707,9 +634,7 @@
 
     const labels = {
       home: null,
-      summer: "Summer Programs",
-      highschool: "High School",
-      university: "University Alum"
+      summer: "Summer Programs"
     };
 
     let currentView = "home";
