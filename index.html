@@ -31,7 +31,6 @@
       line-height: 1.5;
       display: flex;
       flex-direction: column;
-      transition: background 0.25s ease, color 0.25s ease;
     }
     .page {
       max-width: 960px;
@@ -70,14 +69,6 @@
       padding: 5px 12px;
       border-radius: 999px;
       white-space: nowrap;
-    }
-    .site-title {
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
     .search-wrap { position: relative; max-width: 100%; }
     #searchBox {
@@ -137,7 +128,6 @@
     .hero {
       text-align: center;
       margin-bottom: 28px;
-      transition: opacity 0.3s ease;
     }
     .hero h1 {
       font-size: clamp(26px, 5vw, 34px);
@@ -151,64 +141,15 @@
       max-width: 460px;
       margin: 0 auto;
     }
-    .breadcrumbs {
-      display: none;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-    .breadcrumbs.visible { display: flex; }
-    .breadcrumbs button {
-      background: none;
-      border: none;
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 500;
-      font-family: inherit;
-      cursor: pointer;
-      padding: 0;
-    }
-    .breadcrumbs button:hover { text-decoration: underline; }
-    .breadcrumbs .sep { opacity: 0.5; }
-    .breadcrumbs .current { color: var(--text); font-weight: 600; }
-    .view-stage { position: relative; min-height: 200px; }
-    .view {
-      display: none;
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.28s ease, transform 0.28s ease;
-    }
-    .view.active { display: block; }
-    .view.entering {
-      display: block;
-      opacity: 0;
-      transform: translateY(12px);
-    }
-    .view.entered {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .view.leaving {
-      display: block;
-      opacity: 0;
-      transform: translateY(-8px);
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      pointer-events: none;
-    }
     .home-categories {
       display: grid;
-      grid-template-columns: 1fr;
-      max-width: 320px;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 600px;
       margin: 8px auto 0;
       gap: 20px;
     }
-    @media (max-width: 720px) {
+    @media (max-width: 560px) {
+      .home-categories { grid-template-columns: 1fr; max-width: 320px; }
       .site-title { display: none; }
     }
     .cat-btn {
@@ -244,8 +185,6 @@
       font-size: 32px;
     }
     .cat-icon.summer { background: #eff6ff; }
-    .cat-icon.hs { background: #f0fdf4; }
-    .cat-icon.uni { background: #faf5ff; }
     .cat-label {
       font-size: 16px;
       font-weight: 600;
@@ -258,78 +197,6 @@
       font-weight: 400;
       margin-top: -8px;
     }
-    .detail-title {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
-    .programs {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 14px;
-    }
-    .program-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-      box-shadow: var(--shadow);
-      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
-    }
-    .program-card:hover {
-      border-color: var(--primary);
-      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
-      transform: translateY(-1px);
-    }
-    .program-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    .program-name {
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--text);
-      line-height: 1.3;
-    }
-    .ext-link {
-      flex-shrink: 0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 8px;
-      background: var(--primary-soft);
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .ext-link:hover { opacity: 0.85; }
-    .years { display: flex; flex-wrap: wrap; gap: 8px; }
-    .year-chip {
-      display: inline-flex;
-      align-items: center;
-      padding: 6px 12px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--primary);
-      background: var(--primary-soft);
-      border-radius: 8px;
-      text-decoration: none;
-    }
-    .year-chip:hover { opacity: 0.85; }
-    .nested { margin-top: 4px; display: flex; flex-direction: column; gap: 6px; }
-    .nested-label {
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
     footer {
       background: var(--surface);
       color: var(--text-muted);
@@ -338,7 +205,6 @@
       padding: 32px 20px;
       font-size: 14px;
       margin-top: auto;
-      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
     }
     footer a {
       color: var(--primary);
@@ -370,124 +236,22 @@
       </div>
     </div>
 
-    <div class="hero" id="hero">
+    <div class="hero">
       <h1>Accepted Students</h1>
       <p class="subtitle">Discover students accepted into competitive summer programs and international high schools.</p>
     </div>
 
-    <nav class="breadcrumbs" id="breadcrumbs" aria-label="Breadcrumb">
-      <button type="button" data-back>Home</button>
-      <span class="sep">→</span>
-      <span class="current" id="crumbCurrent"></span>
-    </nav>
-
-    <div class="view-stage">
-      <div id="view-home" class="view active entered">
-        <div class="home-categories">
-          <button type="button" class="cat-btn" data-target="summer">
-            <div class="cat-icon summer">☀️</div>
-            <span class="cat-label">Summer Programs</span>
-            <span class="cat-hint">13 programs</span>
-          </button>
-        </div>
-      </div>
-
-      <div id="view-summer" class="view">
-        <h2 class="detail-title">Summer Programs</h2>
-        <div class="programs">
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">AddisCoder</span>
-              <a class="ext-link" href="https://www.addiscoder.com/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="addiscoder2023.html">2023</a><a class="year-chip" href="addiscoder2026.html">2026</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">NASA Space Apps</span>
-              <a class="ext-link" href="https://www.spaceappschallenge.org/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="nasaspaceapps2025.html">2025</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">AFS Global STEM</span>
-              <a class="ext-link" href="https://afs.org/global-stem/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="afsglobalstem2025.html">2025</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">HUVTSP</span>
-              <a class="ext-link" href="https://www.vtsp.com/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="huvtsp2025.html">2025</a><a class="year-chip" href="huvtsp2026.html">2026</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">John Locke Institute</span>
-              <a class="ext-link" href="https://www.johnlockeinstitute.com/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="johnlockeinstitute.html">View students</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">QuestBridge</span>
-              <a class="ext-link" href="https://www.questbridge.org/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="questbridge2025.html">2025</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">SSP</span>
-              <a class="ext-link" href="https://ssp.org/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="ssp2025.html">2025</a><a class="year-chip" href="ssp2026.html">2026</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">YYAS</span>
-              <a class="ext-link" href="https://africanscholars.yale.edu/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="yyas2025.html">2025</a><a class="year-chip" href="yyas2026.html">2026</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">YYGS</span>
-              <a class="ext-link" href="https://globalscholars.yale.edu/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="yygs2025.html">2025</a><a class="year-chip" href="yygs2026.html">2026</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">MITES Summer</span>
-              <a class="ext-link" href="https://mites.mit.edu/discover-mites/mites-summer/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="mites2025.html">2025</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">NSRI</span>
-              <a class="ext-link" href="https://nsri.world/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="nsri.html">View students</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">RSI</span>
-              <a class="ext-link" href="https://www.cee.org/programs/research-science-institute" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="rsi2025.html">2025</a></div>
-          </div>
-          <div class="program-card">
-            <div class="program-top">
-              <span class="program-name">SVF Applied 2026</span>
-              <a class="ext-link" href="https://www.svfellow.com/" target="_blank" rel="noopener" title="Official website"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-            <div class="years"><a class="year-chip" href="svf2026applied.html">View students</a></div>
-          </div>
-        </div>
-      </div>
+    <div class="home-categories">
+      <a class="cat-btn" href="yyas2025.html">
+        <div class="cat-icon summer">☀️</div>
+        <span class="cat-label">YYAS 2025</span>
+        <span class="cat-hint">View students</span>
+      </a>
+      <a class="cat-btn" href="yyas2026.html">
+        <div class="cat-icon summer">☀️</div>
+        <span class="cat-label">YYAS 2026</span>
+        <span class="cat-hint">View students</span>
+      </a>
     </div>
   </div>
 
@@ -631,64 +395,6 @@
       { name: "Yonas Bekele", program: "YYGS 2026", url: "yygs2026.html" },
       { name: "Allen Madime", program: "YYGS 2026", url: "yygs2026.html" }
     ];
-
-    const labels = {
-      home: null,
-      summer: "Summer Programs"
-    };
-
-    let currentView = "home";
-    let transitioning = false;
-
-    function updateChrome(id) {
-      const hero = document.getElementById("hero");
-      const crumbs = document.getElementById("breadcrumbs");
-      const crumbCurrent = document.getElementById("crumbCurrent");
-      if (id === "home") {
-        hero.style.display = "";
-        crumbs.classList.remove("visible");
-      } else {
-        hero.style.display = "none";
-        crumbCurrent.textContent = labels[id] || id;
-        crumbs.classList.add("visible");
-      }
-    }
-
-    function showView(id) {
-      if (transitioning || id === currentView) return;
-      const next = document.getElementById("view-" + id);
-      const prev = document.getElementById("view-" + currentView);
-      if (!next) return;
-      transitioning = true;
-
-      prev.classList.remove("entered", "active");
-      prev.classList.add("leaving");
-
-      next.classList.add("active", "entering");
-      updateChrome(id);
-
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          next.classList.remove("entering");
-          next.classList.add("entered");
-        });
-      });
-
-      setTimeout(() => {
-        prev.classList.remove("leaving", "active", "entered", "entering");
-        currentView = id;
-        transitioning = false;
-      }, 280);
-
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    document.querySelectorAll(".cat-btn").forEach(btn => {
-      btn.addEventListener("click", () => showView(btn.dataset.target));
-    });
-    document.querySelectorAll("[data-back]").forEach(btn => {
-      btn.addEventListener("click", () => showView("home"));
-    });
 
     const searchBox = document.getElementById("searchBox");
     const resultsDiv = document.getElementById("results");
