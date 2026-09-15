@@ -326,6 +326,8 @@
     async function load() {
       const res = await fetch('students.json');
       students = await res.json();
+      // Sort A-Z by name once on load
+      students.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
       render();
       if (location.hash) {
         const el = document.querySelector(location.hash);
@@ -342,7 +344,7 @@
 
     function render() {
       const container = document.getElementById('cards');
-      let list = students;
+      let list = students.slice(); // already sorted A-Z
 
       if (currentFilter !== 'all') {
         list = list.filter(s => s.type === currentFilter);
