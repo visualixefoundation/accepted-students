@@ -3,11 +3,396 @@
     "id": "ashelly-adeline-mwisha",
     "name": "Ashelly Adeline Mwisha",
     "type": "online",
-    "socials": [
-      {
-        "type": "linkedin",
-        "url": "https://www.linkedin.com/in/ashelly-adeline-mwisha-776b72386/"
-      }
-    ]
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/ashelly-adeline-mwisha-776b72386/"}]
+  },
+  {
+    "id": "bua-nyama-moto",
+    "name": "Bua Nyama Moto",
+    "type": "online",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/buanyamamoto"}]
+  },
+  {
+    "id": "carmella",
+    "name": "Carmella",
+    "type": "online",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/_carm.ella._"}]
+  },
+  {
+    "id": "christabel",
+    "name": "Christabel",
+    "type": "online",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/mnichrissy"}]
+  },
+  {
+    "id": "kala-motlhatlhedi",
+    "name": "Kala Motlhatlhedi",
+    "type": "online",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/kala-motlhatlhedi-22240734b/"}]
+  },
+  {
+    "id": "mafata",
+    "name": "Mafata",
+    "type": "online",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/k___fatimaaa"}]
+  },
+  {
+    "id": "ahmed-seddik",
+    "name": "Ahmed Seddik",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/ddraccoo"}]
+  },
+  {
+    "id": "ahmed-waleed",
+    "name": "Ahmed Waleed",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/ahmed-waleed-8857b934a/"}, {"type": "instagram", "url": "https://www.instagram.com/vvw_207"}]
+  },
+  {
+    "id": "aimee-alogeng",
+    "name": "Aimee Alogeng",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/aimee-alogeng-a2539a357/"}, {"type": "instagram", "url": "https://www.instagram.com/aimee.al_"}]
+  },
+  {
+    "id": "amaniel-mebrahtom",
+    "name": "Amaniel Mebrahtom",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/aman.mb2"}]
+  },
+  {
+    "id": "anass-el-alami-el-hassani",
+    "name": "Anass El Alami El Hassani",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/anass-el-alami-el-hassani-a8aa6737a/"}]
+  },
+  {
+    "id": "angel-matumbura",
+    "name": "Angel Matumbura",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/angel-matumbura-37ba74272/"}]
+  },
+  {
+    "id": "angela-aziseh-ayem",
+    "name": "Angela Aziseh Ayem",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/angela-aziseh-ayem-760539383/"}]
+  },
+  {
+    "id": "animashaun-anjolauwa-zainab",
+    "name": "Animashaun Anjolauwa Zainab",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/dreamy.zaynab"}]
+  },
+  {
+    "id": "arwa-aboelez",
+    "name": "Arwa Aboelez",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/arwaahmedllx"}]
+  },
+  {
+    "id": "awuol-william",
+    "name": "Awuol William",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/awuol-william-4a403742a/"}, {"type": "instagram", "url": "https://www.instagram.com/awuol_chol"}]
+  },
+  {
+    "id": "baraa-maysara",
+    "name": "Baraa Maysara",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/baraa-maysara/"}, {"type": "instagram", "url": "https://www.instagram.com/b.ar4a"}]
+  },
+  {
+    "id": "bashiru-hamisi",
+    "name": "Bashiru Hamisi",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/bashiru-hamisi-7b2312286/"}]
+  },
+  {
+    "id": "caleb-john-dismas",
+    "name": "Caleb John Dismas",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/_calebshakq_"}]
+  },
+  {
+    "id": "chloe-mallens",
+    "name": "Chloe Mallens",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/chloe-mallens-b9a05439b/"}]
+  },
+  {
+    "id": "dalal-chihab",
+    "name": "Dalal Chihab",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/dalal-chihab-8564b4334/"}]
+  },
+  {
+    "id": "delina-hagos",
+    "name": "Delina Hagos",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/delina-hagos-21abb3429/"}]
+  },
+  {
+    "id": "eliana-berhanemeskel",
+    "name": "Eliana Berhanemeskel",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/eliana-berhanemeskel-0032b2391/"}]
+  },
+  {
+    "id": "eliel-kawel",
+    "name": "Eliel Kawel",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/eliel-kawel-6774533b9/"}, {"type": "instagram", "url": "https://www.instagram.com/eliii_jeager"}]
+  },
+  {
+    "id": "elee-nasri",
+    "name": "Elèe Nasri",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/el%C3%A8e-nasri-a251473b8/"}]
+  },
+  {
+    "id": "eyob-ayalew",
+    "name": "Eyob Ayalew",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/eyob-ayalew-5b4209382/"}]
+  },
+  {
+    "id": "eyosyas-mesfin",
+    "name": "Eyosyas Mesfin",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/eyosyas-mesfin-58b64636a/"}]
+  },
+  {
+    "id": "fadel-malam-moumouni",
+    "name": "Fadel Malam Moumouni",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/fadel-malam-moumouni-9bb3b6238/"}, {"type": "instagram", "url": "https://www.instagram.com/fad_mlk_"}]
+  },
+  {
+    "id": "filemon-richard",
+    "name": "Filemon Richard",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/filemon-richard-154a58354/"}, {"type": "instagram", "url": "https://www.instagram.com/the__flemon"}]
+  },
+  {
+    "id": "hiryakos-kassahun",
+    "name": "Hiryakos Kassahun",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/hiryakos-kassahun-a217aa3bb/"}, {"type": "instagram", "url": "https://www.instagram.com/da_harry_"}]
+  },
+  {
+    "id": "jelica-hamza",
+    "name": "Jelica Hamza",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/jelica-hamza-6ba690402/"}]
+  },
+  {
+    "id": "joshua-mbuli",
+    "name": "Joshua Mbuli",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/joshua-mbuli-ab585a386/"}]
+  },
+  {
+    "id": "judy-ismail",
+    "name": "Judy Ismail",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/judyy-ismail/"}, {"type": "instagram", "url": "https://www.instagram.com/judyy_hatem"}]
+  },
+  {
+    "id": "kayla-akosionu",
+    "name": "Kayla Akosionu",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/kayla-akosionu-887215384/"}]
+  },
+  {
+    "id": "khanyisile",
+    "name": "Khanyisile",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/khanyi_mzyece"}]
+  },
+  {
+    "id": "kidus-abera",
+    "name": "Kidus Abera",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/kidus_abera_"}]
+  },
+  {
+    "id": "layla-adel",
+    "name": "Layla Adel",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/layla.3adel"}]
+  },
+  {
+    "id": "louay-cherif",
+    "name": "Louay Cherif",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/louaycherif233"}]
+  },
+  {
+    "id": "manuel-muhunami",
+    "name": "Manuel Muhunami",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/manuel-indombera/"}]
+  },
+  {
+    "id": "mariam-elkholy",
+    "name": "Mariam Elkholy",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/mariam-elkholy-403326283/"}]
+  },
+  {
+    "id": "martin-mpuuga",
+    "name": "Martin Mpuuga",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/martin-mpuuga-a007103b2/"}]
+  },
+  {
+    "id": "mayara-inacio",
+    "name": "Mayara Inacio",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/may_ri1"}]
+  },
+  {
+    "id": "michelle-etoh",
+    "name": "Michelle Etoh",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/michelle-etoh-3ab612343/"}]
+  },
+  {
+    "id": "mikias-birhame-amare",
+    "name": "Mikias Birhame Amare",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/mikias-amare-251681402/"}, {"type": "instagram", "url": "https://www.instagram.com/infamous_ni99a"}]
+  },
+  {
+    "id": "mohamad-ali-ahmed",
+    "name": "Mohamad Ali Ahmed",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/mohamad-ali-ahmed-481295380/"}]
+  },
+  {
+    "id": "mohammed-hajiri",
+    "name": "Mohammed Hajiri",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/_mohamed_hajry_"}]
+  },
+  {
+    "id": "mphoeami-moyo",
+    "name": "Mphoeami Moyo",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/mphoeami-moyo-1519a9371/"}]
+  },
+  {
+    "id": "mukelwe-magagula",
+    "name": "Mukelwe Magagula",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/mukelwe-magagula-00015a282/"}, {"type": "instagram", "url": "https://www.instagram.com/excl.usivelywithmukelwe"}]
+  },
+  {
+    "id": "nadine-mostafa",
+    "name": "Nadine Mostafa",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/nadine-mostafa-3a532b35b/"}, {"type": "instagram", "url": "https://www.instagram.com/__nadinemostafa"}]
+  },
+  {
+    "id": "oritsematosan-jackson",
+    "name": "Oritsematosan Jackson",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/tosanjackson"}]
+  },
+  {
+    "id": "oyintanda-msimanga",
+    "name": "Oyintanda Msimanga",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/oyintanda-m-698185381/"}, {"type": "instagram", "url": "https://www.instagram.com/xo.oyi"}]
+  },
+  {
+    "id": "rewaa-soliman",
+    "name": "Rewaa Soliman",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/rewaa-soliman-2990a6369/"}]
+  },
+  {
+    "id": "ruth-getnet",
+    "name": "Ruth Getnet",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/ruth-getnet-21bb9b34a/"}, {"type": "instagram", "url": "https://www.instagram.com/iseek_serenity"}]
+  },
+  {
+    "id": "ryan-nyanga",
+    "name": "Ryan Nyanga",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/ryan-nyanga/"}]
+  },
+  {
+    "id": "salma-mahmoud-hassany",
+    "name": "Salma Mahmoud Hassany",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/salma-mahmoud-18077336b/"}, {"type": "instagram", "url": "https://www.instagram.com/salmahmoud4"}]
+  },
+  {
+    "id": "selma-khali",
+    "name": "Selma Khali",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/selma-khali-820155335/"}, {"type": "instagram", "url": "https://www.instagram.com/khaliselma"}]
+  },
+  {
+    "id": "sinlatei-ruth-agbojule",
+    "name": "Sinlatei Ruth Agbojule",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/agbojule-sinlatei-041a593a7/"}, {"type": "instagram", "url": "https://www.instagram.com/sinlateiagbojule"}]
+  },
+  {
+    "id": "somtochukwu-onwusika",
+    "name": "Somtochukwu Onwusika",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/somto-onwusika/"}]
+  },
+  {
+    "id": "soundous-nouri",
+    "name": "Soundous Nouri",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/soundous-nouri-1b28b7379/"}, {"type": "instagram", "url": "https://www.instagram.com/soundous.n_"}]
+  },
+  {
+    "id": "tafadzwa-mapanga",
+    "name": "Tafadzwa Mapanga",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/taffff.y"}, {"type": "instagram", "url": "https://www.instagram.com/tafffy.waffy"}]
+  },
+  {
+    "id": "tahira-mijindadi",
+    "name": "Tahira Mijindadi",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/its_tahiraaa.m"}]
+  },
+  {
+    "id": "tedd-odek",
+    "name": "Tedd Odek",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/tedd-odek/"}]
+  },
+  {
+    "id": "tobiloba-olugbenro",
+    "name": "Tobiloba Olugbenro",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/tobiloba-olugbenro-34a37042a/"}]
+  },
+  {
+    "id": "yann-fadel-derra",
+    "name": "Yann Fadel Derra",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/yann-fadel-derra-29112a390/"}]
+  },
+  {
+    "id": "yochebed-senami-adisso",
+    "name": "Yochebed Senami Adisso",
+    "type": "residential",
+    "socials": [{"type": "instagram", "url": "https://www.instagram.com/yochebedadisso"}]
+  },
+  {
+    "id": "zeineb-ouarghi",
+    "name": "Zeineb Ouarghi",
+    "type": "residential",
+    "socials": [{"type": "linkedin", "url": "https://www.linkedin.com/in/zeineb-ouarghi-987a57365/"}]
   }
 ]
