@@ -158,6 +158,14 @@
       transition: border-color 0.15s, box-shadow 0.15s;
       scroll-margin-top: 20px;
     }
+    @media (max-width: 480px) {
+      .card {
+        padding: 12px 14px;
+        gap: 8px;
+      }
+      .cards { gap: 10px; }
+      .page { padding: 24px 16px 48px; }
+    }
     .card:hover {
       border-color: #bfdbfe;
       box-shadow: 0 4px 16px rgba(37,99,235,0.08);
@@ -387,10 +395,7 @@
       navigator.clipboard.writeText(url).then(() => {
         btn.classList.add('copied');
         btn.innerHTML = '✓ Copied';
-        setTimeout(() => {
-          btn.classList.remove('copied');
-          btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Copy link';
-        }, 1800);
+        // Stays green permanently (no timeout)
       });
     }
 
