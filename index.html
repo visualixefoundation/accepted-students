@@ -6,6 +6,9 @@
   <title>Accepted Students | Visualixe Foundation</title>
   <meta name="description" content="Discover students accepted into the Yale Young African Scholars (YYAS) 2026 program. Browse Online and Residential cohorts from across Africa.">
   
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://accepted-students.vercel.app/">
@@ -170,9 +173,17 @@
       color: #2563eb;
     }
     .no-results {
-      padding: 14px;
+      padding: 18px 16px;
       color: var(--text-muted);
       font-size: 14px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .no-results strong {
+      display: block;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 4px;
     }
     .hero {
       text-align: center;
@@ -265,6 +276,13 @@
       background: #1d4ed8;
       transform: translateY(-1px);
     }
+    .cat-link.apply {
+      background: #059669;
+      margin-top: 8px;
+    }
+    .cat-link.apply:hover {
+      background: #047857;
+    }
     footer {
       background: var(--surface);
       color: var(--text-muted);
@@ -316,7 +334,7 @@
         <span class="cat-hint">2026</span>
         <span class="cat-status">Applications are open for 2027</span>
         <a class="cat-link" href="yyas2026.html">View accepted students →</a>
-        <a class="cat-link" href="https://africanscholars.yale.edu/" target="_blank" rel="noopener" style="background: transparent; color: var(--primary); border: 1.5px solid var(--primary); margin-top: 8px;">Official YYAS website →</a>
+        <a class="cat-link apply" href="https://africanscholars.yale.edu/" target="_blank" rel="noopener">Apply for YYAS 2027 →</a>
       </div>
     </div>
   </div>
@@ -365,7 +383,7 @@
       resultsDiv.style.display = 'block';
 
       if (!matches.length) {
-        resultsDiv.innerHTML = '<div class="no-results">No matches found.</div>';
+        resultsDiv.innerHTML = '<div class="no-results"><strong>No students found</strong>Try a different spelling or first name only</div>';
         return;
       }
 
