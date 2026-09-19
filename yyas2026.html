@@ -6,6 +6,9 @@
   <title>YYAS 2026 Accepted Students | Visualixe Foundation</title>
   <meta name="description" content="Full list of students accepted into Yale Young African Scholars 2026 — Online (6) and Residential (60) cohorts.">
 
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://accepted-students.vercel.app/yyas2026.html">
@@ -264,10 +267,29 @@
       background: #ecfdf5;
     }
 
-    .empty-state {
+    .empty-state, .loading-state {
       text-align: center;
       padding: 48px 20px;
       color: var(--muted);
+    }
+    .empty-state strong, .loading-state strong {
+      display: block;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .loading-state .spinner {
+      width: 28px;
+      height: 28px;
+      border: 3px solid var(--border);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
     }
 
     footer {
@@ -314,7 +336,13 @@
       <input type="text" id="listSearch" placeholder="Filter by name..." autocomplete="off">
     </div>
 
-    <div class="cards" id="cards"></div>
+    <div class="cards" id="cards">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <strong>Loading students…</strong>
+        Please wait a moment
+      </div>
+    </div>
   </div>
 
   <footer>
@@ -328,14 +356,19 @@
     let searchQuery = '';
 
     async function load() {
-      const res = await fetch('students.json');
-      students = await res.json();
-      // Sort A-Z by name once on load
-      students.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
-      render();
-      if (location.hash) {
-        const el = document.querySelector(location.hash);
-        if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+      try {
+        const res = await fetch('students.json');
+        students = await res.json();
+        // Sort A-Z by name once on load
+        students.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
+        render();
+        if (location.hash) {
+          const el = document.querySelector(location.hash);
+          if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+        }
+      } catch (e) {
+        document.getElementById('cards').innerHTML =
+          '<div class="empty-state"><strong>Couldn’t load students</strong>Please refresh the page and try again.</div>';
       }
     }
 
@@ -362,7 +395,7 @@
       }
 
       if (!list.length) {
-        container.innerHTML = '<div class="empty-state">No students match your filters.</div>';
+        container.innerHTML = '<div class="empty-state"><strong>No students found</strong>Try a different name or clear the filters.</div>';
         return;
       }
 
@@ -395,7 +428,7 @@
       navigator.clipboard.writeText(url).then(() => {
         btn.classList.add('copied');
         btn.innerHTML = '✓ Copied';
-        // Stays green permanently (no timeout)
+        // Stays green permanently
       });
     }
 
